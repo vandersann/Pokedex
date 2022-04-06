@@ -15,20 +15,22 @@
             v-for="pokemon in filtered_pokemons"
             :key="pokemon.name"
           >
-            <v-card @click="show_pokemon(get_id(pokemon))" class="rounded-xl">
+            <v-card @click="show_pokemon(get_id(pokemon))" class="rounded-xl" color="#E6D6FA">
               <v-container>
-                <h3 class="justify-sm-space-around">{{ get_id(pokemon) }}</h3>
+                <h3 class="justify-sm-space-around mb-md-2">
+                  {{ get_id(pokemon) }}
+                </h3>
                 <v-row class="mx-0 d-flex justify-center">
-                  <img
-                    :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${get_id(
-                      pokemon
-                    )}.png`"
-                    :alt="pokemon.name"
-                    loading="lazy"
-                    width="70%"
-                  />
+                    <img
+                      :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${get_id(
+                        pokemon
+                      )}.png`"
+                      :alt="pokemon.name"
+                      loading="lazy"
+                      width="80%"
+                    />
                 </v-row>
-                <h3 class="text-sm-center">{{ get_name(pokemon) }}</h3>
+                <h3 class="text-sm-center mt-md-2">{{ get_name(pokemon) }}</h3>
               </v-container>
             </v-card>
           </v-col>
@@ -40,18 +42,18 @@
         <v-container>
           <v-row class="d-flex align-center">
             <v-col cols="4">
-            <img
-                    :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${selected_pokemon.id}.png`"
-                    :alt="selected_pokemon.name"
-                    loading="lazy"
-                    width="80%"
-                  />
+              <v-contaiener>
+                <img
+                  :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${selected_pokemon.id}.png`"
+                  :alt="selected_pokemon.name"
+                  loading="lazy"
+                  width="80%"
+                />
+              </v-contaiener>
             </v-col>
             <v-col cols="8">
-              <h1> {{ get_name(selected_pokemon) }} </h1>
-              <v-chip>
-                Altura {{ selected_pokemon.height * 2.54 }} cm
-              </v-chip>
+              <h1>{{ get_name(selected_pokemon) }}</h1>
+              <v-chip> Altura {{ selected_pokemon.height * 2.54 }} cm </v-chip>
               <v-chip class="ml-1">
                 Peso {{ (selected_pokemon.weight * 0.453).toFixed(0) }} kg
               </v-chip>
@@ -102,13 +104,13 @@ export default {
       });
     },
   },
-    computed: {
-      filtered_pokemons() {
-        return this.pokemons.filter((item) => {
-          return item.name.includes(this.search);
-        });
-      },
-    }, 
+  computed: {
+    filtered_pokemons() {
+      return this.pokemons.filter((item) => {
+        return item.name.includes(this.search);
+      });
+    },
+  },
 };
 </script>
 
