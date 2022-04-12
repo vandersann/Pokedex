@@ -5,9 +5,10 @@
         <v-row>
           <v-container>
             <v-img
-              :src="require('../src/assets/title.png')"
-              class="my-2"
-              height="250"
+              :src="require('../src/assets/title50.png')"
+              class=""
+              contain
+              width="60%"
             />
             <h1 class="text-center white--text mb-8">
               by <a class="red--text" href="https://github.com/vandersann">Vandersann</a>
@@ -17,8 +18,8 @@
 
         <v-text-field
           v-model="search"
-          label="Pesquisar"
-          placeholder="Charmander"
+          label="Search for"
+          placeholder="type here..."
           solo
         ></v-text-field>
 
@@ -29,7 +30,12 @@
             v-for="pokemon in filtered_pokemons"
             :key="pokemon.name"
           >
-            <PokemonCard :pokemon="pokemon" @clicked="show_pokemon" />
+            <PokemonCard
+            :pokemon="pokemon"
+            @clicked="show_pokemon"
+            class="rounded-xl"
+            color="#E6D6FA"
+            />
           </v-col>
         </v-row>
       </v-container>
@@ -67,7 +73,7 @@ export default {
 
   mounted() {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon?limit=493")
+      .get("https://pokeapi.co/api/v2/pokemon?limit=1100")
       .then((response) => {
         this.pokemons = response.data.results;
       });
@@ -105,8 +111,8 @@ export default {
 #app {
   background: linear-gradient(
       to bottom right,
-      rgba(10, 10, 10, 1),
-      rgba(12, 39, 63, 1)
+      #CEBCFA,
+      #E6CCF9
     )
     no-repeat center center fixed !important;
   -webkit-background-size: cover;
