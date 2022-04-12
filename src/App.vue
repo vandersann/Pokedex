@@ -2,18 +2,20 @@
   <v-app>
     <v-container>
       <v-container>
-        <v-row>
-          <v-container>
+        <v-row class="d-flex align-center">
+          <v-col cols="12">
             <v-img
               :src="require('../src/assets/title50.png')"
-              class=""
-              contain
-              width="60%"
+              class="mx-auto"
+              :aspect-ratio="16/9"
+              width="600"
             />
+          </v-col>
+          <v-col cols="12">
             <h1 class="text-center white--text mb-8">
-              by <a class="red--text" href="https://github.com/vandersann">Vandersann</a>
-            </h1>
-          </v-container>
+            by <a class="red--text" href="https://github.com/vandersann">Vandersann</a>
+          </h1>
+          </v-col>
         </v-row>
 
         <v-text-field
@@ -33,7 +35,6 @@
             <PokemonCard
             :pokemon="pokemon"
             @clicked="show_pokemon"
-            class="rounded-xl"
             color="#E6D6FA"
             />
           </v-col>
@@ -73,7 +74,7 @@ export default {
 
   mounted() {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon?limit=1100")
+      .get("https://pokeapi.co/api/v2/pokemon?limit=100")
       .then((response) => {
         this.pokemons = response.data.results;
       });
