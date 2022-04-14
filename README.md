@@ -6,9 +6,9 @@ Esse é um projeto de uma Pokedex focado em funcionalidades Vue.js, com o intuit
 
 ## 🔨 Tecnologias:
 
-- [nodejs]: https://nodejs.org/
-- [Vue.js]:https://v2.vuejs.org/
-- [JavaScript]:https://www.javascript.com/
+- [nodejs](https://nodejs.org/)
+- [Vue.js](https://v2.vuejs.org/)
+- [JavaScript](https://www.javascript.com/)
 
 ## 🤘 Clonando repositorio e Subindo Aplicação
 
