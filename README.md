@@ -1,6 +1,7 @@
 # Pokedex by Vandersann
 
-
+## 🔎 Sobre
+Esse é um projeto de uma Pokedex focado para pratica de funcionalidades do Vue.js e de API.
 
 Basiamente o aplicativo apresenta em sua interface uma listagem completa de pokemons exisentes junto com detalhes
 específicos, como altura, peso, ataques, evoluçõs e etc.
