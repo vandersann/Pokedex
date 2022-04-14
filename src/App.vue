@@ -35,7 +35,7 @@
             <PokemonCard
             :pokemon="pokemon"
             @clicked="show_pokemon"
-            color="#E6D6FA"
+            color="#ffffff"
             />
           </v-col>
         </v-row>
@@ -74,7 +74,7 @@ export default {
 
   mounted() {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon?limit=100")
+      .get("https://pokeapi.co/api/v2/pokemon?limit=1100")
       .then((response) => {
         this.pokemons = response.data.results;
       });
@@ -112,8 +112,8 @@ export default {
 #app {
   background: linear-gradient(
       to bottom right,
-      #CEBCFA,
-      #E6CCF9
+      #3499ff,
+      #6ee2f5
     )
     no-repeat center center fixed !important;
   -webkit-background-size: cover;
