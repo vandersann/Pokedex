@@ -21,8 +21,6 @@ $ cd PokeDex
 
 O projeto está configurado para ser inicializado por [NPM](https://www.npmjs.com/), via terminal
 
-- NPM
-
 ```shell
 npm install
 ```
