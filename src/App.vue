@@ -13,7 +13,7 @@
           </v-col>
           <v-col cols="12">
             <h1 class="text-center white--text mb-8">
-            by <a class="red--text" href="https://github.com/vandersann">Vandersann</a>
+            by <a class="red--text" href="https://github.com/vandersann">Vandersann💡</a>
           </h1>
           </v-col>
         </v-row>
@@ -35,7 +35,6 @@
             <PokemonCard
             :pokemon="pokemon"
             @clicked="show_pokemon"
-            color="#ffffff"
             />
           </v-col>
         </v-row>
