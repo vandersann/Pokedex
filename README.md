@@ -1,8 +1,6 @@
 # Pokedex
 
-<h2 align="center">
-https://user-images.githubusercontent.com/65673565/163477264-35b6b8c7-33e8-4b34-99cb-a9790ad6d08d.mp4
-</h2>
+<img alt="Aplicação" src="https://user-images.githubusercontent.com/65673565/163477264-35b6b8c7-33e8-4b34-99cb-a9790ad6d08d.mp4">
 
 
 Esse é um projeto de uma Pokedex focado em funcionalidades Vue.js, com o intuito de praticar meus conhecimentos.
