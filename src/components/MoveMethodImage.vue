@@ -2,22 +2,22 @@
   <div>
     <v-img
       v-if="method == 'level-up'"
-      :src="require('../assets/level-up.svg')"
+      :src="require('../assets/level-up.png')"
       width="30px"
     ></v-img>
     <v-img
       v-else-if="method == 'egg'"
-      :src="require('../assets/egg.svg')"
+      :src="require('../assets/egg.png')"
       width="30px"
     ></v-img>
     <v-img
       v-else-if="method == 'machine'"
-      :src="require('../assets/book.svg')"
+      :src="require('../assets/book.png')"
       width="30px"
     ></v-img>
     <v-img
       v-else-if="method == 'tutor'"
-      :src="require('../assets/teacher.svg')"
+      :src="require('../assets/teacher.png')"
       width="30px"
     ></v-img>
   </div>

@@ -12,7 +12,7 @@
             />
           </v-col>
           <v-col cols="12">
-            <h1 class="text-center white--text mb-8">
+            <h1 class="text-center white--text mb-6">
             by <a class="red--text" href="https://github.com/vandersann">Vandersann💡</a>
           </h1>
           </v-col>

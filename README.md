@@ -1,10 +1,22 @@
 # Pokedex
 
-Esse é um projeto de uma Pokedex feita em Javascript e Vue. Esse projeto é parte da série "Programando com o Neps".
+Esse é um projeto de uma Pokedex focado em funcionalidades Vue.js, com o intuito de praticar meus conhecimentos.
 
-Você pode conferir a live em que esse projeto foi feito clicando na imagem abaixo:
+O projeto está configurado para ser inicializado por [NPM](https://www.npmjs.com/), via terminal
 
-[![Watch the video](https://img.youtube.com/vi/TZCTk3oA_D0/hqdefault.jpg)](https://youtu.be/TZCTk3oA_D0)
+- NPM
+
+```shell
+npm install
+```
+
+Após a instalação será possível executar a aplicação usando o [NPM](https://www.npmjs.com/)
+
+```shell
+npm run serve
+```
+
+
 
 Mudanças:
 

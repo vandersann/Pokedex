@@ -1,9 +1,9 @@
 <template>
   <v-card
-  class="card"
+  class="card rounded-lg"
   @click="show_pokemon(get_id(pokemon))"
   :flat="flat"
-  color="rgba(280,280,280, 0.55)"
+  color="rgba(280,280,280, 0.45)"
   >
     <v-container>
       <h3 class="card-number">No. {{ get_id(pokemon) }}</h3>
@@ -12,6 +12,7 @@
           :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${get_id(
             pokemon
           )}.png`"
+          loading="lazy"
           :alt="pokemon.name"
           mb-2
           width="80%"
@@ -52,6 +53,7 @@ export default {
 .card{
   width: 80%;
   background-size: flex;
+  border-style: outset;
   position: relative;
   transform-style:preserve-3d;
   will-change: transform;
