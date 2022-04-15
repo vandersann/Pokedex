@@ -16,7 +16,7 @@ Os dados foram consumidos da API oficial do Pokemon, a [PokéApi](https://pokeap
 - [Vue.js](https://v2.vuejs.org/)
 - [JavaScript](https://www.javascript.com/)
 
-## 🤘 Clonando repositorio e Subindo Aplicação
+## 🤘 Clonando repositório e Subindo Aplicação
 
 ```bash
 # Clone este repositório
