@@ -3,7 +3,7 @@
   class="card rounded-lg"
   @click="show_pokemon(get_id(pokemon))"
   :flat="flat"
-  color="rgba(280,280,280, 0.45)"
+  color="rgba(280,280,280, 0.50)"
   >
     <v-container>
       <h3 class="card-number">No. {{ get_id(pokemon) }}</h3>
@@ -15,7 +15,7 @@
           loading="lazy"
           :alt="pokemon.name"
           mb-2
-          width="80%"
+          width="100%"
         />
       </v-row>
       <h3
@@ -50,8 +50,10 @@ export default {
 </script>
 
 <style>
+
 .card{
-  width: 80%;
+  font-size: 1.8em;
+  width: 100%;
   background-size: flex;
   border-style: outset;
   position: relative;
@@ -65,16 +67,67 @@ export default {
 }
 .card-title{
   background-size: flex;
-  font-color:black;
+  color:black;
   position: center;
   text-align:center;
   margin-top:15px;
+  font-size: 1em;
 }
 .card-number{
   background-size: flex;
-  font-color:black;
+  color:black;
   position: left;
   text-align:start;
   margin-bottom:15px;
 }
+
+@media screen and (max-width: 1903px) {
+  .card{
+  font-size: 1.6em;
+  }
+}
+
+@media screen and (max-width: 1263px) {
+  .card{
+  font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .card{
+  font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 418px) {
+  .card{
+  font-size: 1.6em;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .card{
+  font-size: 1.4em;
+  }
+}
+
+@media screen and (max-width: 353px) {
+  .card{
+  font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card{
+  font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 271px) {
+  .card{
+  font-size: 0.8em;
+  }
+}
+
+
 </style>

@@ -3,6 +3,7 @@
     <v-row class="mx-0 d-flex align-center">
       <template v-for="(evolution_detail, index) in evolutions()">
         <v-col
+          width="92"
           cols="12"
           md="3"
           :key="`evolution-${index}`"
@@ -84,4 +85,14 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+.row {
+  font-size: 9.2px;
+}
+
+.row h3 {
+  font-size: 0.8rem;
+}
+
+</style>

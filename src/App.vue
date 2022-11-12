@@ -8,7 +8,7 @@
               :src="require('../src/assets/title50.png')"
               class="mx-auto"
               :aspect-ratio="16/9"
-              width="600"
+              width="500"
             />
           </v-col>
           <v-col cols="12">
@@ -23,6 +23,7 @@
           label="Search for"
           placeholder="type here..."
           solo
+          prepend-inner-icon="mdi-magnify"
         ></v-text-field>
 
         <v-row>
@@ -73,7 +74,7 @@ export default {
 
   mounted() {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon?limit=1100")
+      .get("https://pokeapi.co/api/v2/pokemon?limit=1000")
       .then((response) => {
         this.pokemons = response.data.results;
       });
@@ -109,17 +110,34 @@ export default {
 
 <style>
 #app {
-  background: linear-gradient(
-      to bottom right,
-      #3499ff,
-      #6ee2f5
-    )
-    no-repeat center center fixed !important;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover !important;
-  background-position: center;
-  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to left, #DCA3FF,#B99FE8,#AAA3FF,#9DADF5,#5472F7 );
+  background-size: 300% 300%;
+  animation: colors 10s infinite alternate;
 }
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.container {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 342px) {
+  h1 {
+    font-size: 1.2em;
+  }
+}
+
 </style>
