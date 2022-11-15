@@ -20,12 +20,12 @@
 
             <v-divider class="my-4"> </v-divider>
             <v-chip label
-              >Height {{ selected_pokemon.height * 2.54 }} cm</v-chip
+              >Height {{ Math.round(selected_pokemon.height * 2.54).toLocaleString('pt-BR') }} cm</v-chip
             >
             <v-chip label class="ml-2"
               >Weight
-              {{ (selected_pokemon.weight * 0.45359237).toFixed(0) }}
-              kgs</v-chip
+              {{ Math.round(selected_pokemon.weight * 0.45359237).toLocaleString('pt-BR') }}
+              kg</v-chip
             >
           </v-col>
         </v-row>
@@ -115,6 +115,16 @@ export default {
     show: Boolean,
     selected_pokemon: Object,
   },
+
+  async created() {
+    if (this.pokemonName) {
+      this.pokemonData = await this.getDataSpecificPokemon(this.pokemonName);
+      this.pokemonDescription = await this.getPokemonDescription(
+        this.pokemonData
+      );
+    }
+  },
+
   methods: {
     get_name(pokemon) {
       return pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
@@ -127,6 +137,7 @@ export default {
       return response;
     },
   },
+
   computed: {
     moves() {
       let response = { "level-up": [], egg: [], machine: [], tutor: [] };

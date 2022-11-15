@@ -86,6 +86,7 @@ export default {
         this.show_dialog = !this.show_dialog;
       });
     },
+
     get_move_level(move) {
       for (let version of move.version_group_details) {
         if (
