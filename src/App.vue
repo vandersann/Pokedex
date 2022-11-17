@@ -23,6 +23,7 @@
           label="Search for"
           placeholder="type here..."
           solo
+
           prepend-inner-icon="mdi-magnify"
         ></v-text-field>
 
@@ -110,6 +111,20 @@ export default {
 </script>
 
 <style>
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.258);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent,  #DCA3FF,#B99FE8,#AAA3FF,#9DADF5,#5472F7);
+  border-radius: 10px;
+}
+
 #app {
   width: 100vw;
   background: linear-gradient(to left, #DCA3FF,#B99FE8,#AAA3FF,#9DADF5,#5472F7 );
@@ -137,6 +152,9 @@ export default {
 
 @media screen and (max-width: 342px) {
   h1 {
+    font-size: 1.2em;
+  }
+  .v-text-field {
     font-size: 1.2em;
   }
 }
