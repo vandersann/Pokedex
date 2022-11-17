@@ -1,9 +1,9 @@
 <template>
   <v-card
-  class="card rounded-lg"
-  @click="show_pokemon(get_id(pokemon))"
-  :flat="flat"
-  color="rgba(280,280,280, 0.50)"
+    class="card rounded-lg"
+    @click="show_pokemon(get_id(pokemon))"
+    :flat="flat"
+    color="rgba(280,280,280, 0.50)"
   >
     <v-container>
       <h3 class="card-number">No. {{ get_id(pokemon) }}</h3>
@@ -15,12 +15,11 @@
           loading="lazy"
           :alt="pokemon.name"
           mb-2
-          width="100%"
+          width="70%"
         />
       </v-row>
-      <h3
-      class="card-title">
-      {{ get_name(pokemon) }}
+      <h3 class="card-title">
+        {{ get_name(pokemon) }}
       </h3>
     </v-container>
   </v-card>
@@ -50,84 +49,103 @@ export default {
 </script>
 
 <style>
-
-.card{
+.card {
   font-size: 1.8em;
-  width: 100%;
-  background-size: flex;
-  border-style: outset;
+  width: 80%;
+  box-shadow: 0 0 5px 0px #e2e2e2;
   position: relative;
-  transform-style:preserve-3d;
-  will-change: transform;
-  transition: transform .5s;
+  cursor: pointer;
 }
-.card:hover{
-  transform: translateZ(10px)
-  rotateX(20deg) rotateY(30deg);
+
+.card:after, .card:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.1s ease-in-out;
 }
-.card-title{
+
+.card:after {
+  border: 2px solid black;
+  transform: scaleZ(0);
+  animation: btn-pisca .5s linear infinite;
+}
+
+.card:hover:after {
+  transform: scaleX(1);
+}
+
+@keyframes btn-pisca {
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.card-title {
   background-size: flex;
-  color:black;
+  color: black;
   position: center;
-  text-align:center;
-  margin-top:15px;
+  text-align: center;
+  margin-top: 15px;
   font-size: 1em;
 }
-.card-number{
+.card-number {
   background-size: flex;
-  color:black;
+  color: black;
   position: left;
-  text-align:start;
-  margin-bottom:15px;
+  text-align: start;
+  margin-bottom: 15px;
 }
 
+/* Media Screen */
+
 @media screen and (max-width: 1903px) {
-  .card{
-  font-size: 1.6em;
+  .card {
+    font-size: 1.3em;
   }
 }
 
 @media screen and (max-width: 1263px) {
-  .card{
-  font-size: 1em;
+  .card {
+    font-size: 0.8em;
   }
 }
 
 @media screen and (max-width: 959px) {
-  .card{
-  font-size: 1.8em;
+  .card {
+    font-size: 1.8em;
   }
 }
 
 @media screen and (max-width: 418px) {
-  .card{
-  font-size: 1.6em;
+  .card {
+    font-size: 1.3em;
   }
 }
 
 @media screen and (max-width: 384px) {
-  .card{
-  font-size: 1.4em;
+  .card {
+    font-size: 1.2em;
   }
 }
 
 @media screen and (max-width: 353px) {
-  .card{
-  font-size: 1.2em;
+  .card {
+    font-size: 1em;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .card{
-  font-size: 1em;
+  .card {
+    font-size: 0.8em;
   }
 }
 
 @media screen and (max-width: 271px) {
-  .card{
-  font-size: 0.8em;
+  .card {
+    font-size: 0.6em;
   }
 }
-
-
 </style>
