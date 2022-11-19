@@ -47,7 +47,7 @@
       :selected_pokemon="selected_pokemon"
     />
 
-    <audio autoplay="autoplay" controls="controls">
+    <audio autoplay="autoplay" controls="controls" loop="true">
       <source src="./assets/audio/pokemonTema.mp3" type="audio/mp3" />
     </audio>
 
@@ -115,6 +115,7 @@ export default {
     clickMouse: function () {
       this.play_audio(confirmaAudio);
     },
+
   },
   computed: {
     filtered_pokemons() {
