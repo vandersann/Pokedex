@@ -1,5 +1,6 @@
 <template>
   <v-card
+    @mouseenter="slideMouse"
     class="card rounded-lg"
     @click="show_pokemon(get_id(pokemon))"
     :flat="flat"
@@ -26,6 +27,9 @@
 </template>
 
 <script>
+import selecaoAudio from "../assets/audio/selecao.mp3";
+import confirmaAudio from "../assets/audio/confirma.wav";
+
 export default {
   props: {
     pokemon: Object,
@@ -43,6 +47,18 @@ export default {
     },
     show_pokemon(id) {
       this.$emit("clicked", id);
+      this.play_audio(confirmaAudio);
+    },
+
+    play_audio(soundFile) {
+      if (soundFile) {
+        let audio = new Audio(soundFile);
+        audio.play();
+      }
+    },
+
+    slideMouse: function () {
+      this.play_audio(selecaoAudio);
     },
   },
 };
@@ -57,7 +73,8 @@ export default {
   cursor: pointer;
 }
 
-.card:after, .card:before {
+.card:after,
+.card:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -70,7 +87,7 @@ export default {
 .card:after {
   border: 2px solid black;
   transform: scaleZ(0);
-  animation: btn-pisca .5s linear infinite;
+  animation: btn-pisca 0.5s linear infinite;
 }
 
 .card:hover:after {
@@ -78,9 +95,15 @@ export default {
 }
 
 @keyframes btn-pisca {
-  0% { opacity: 0; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .card-title {
