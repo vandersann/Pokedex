@@ -3,8 +3,9 @@
     @mouseenter="slideMouse"
     class="card rounded-lg"
     @click="show_pokemon(get_id(pokemon))"
-    :flat="flat"
-    color="rgba(280,280,280, 0.50)"
+    outlined
+    elevation="2"
+    color="rgba(280,280,280, 0.80)"
   >
     <v-container>
       <h3 class="card-number">No. {{ get_id(pokemon) }}</h3>
@@ -85,7 +86,8 @@ export default {
 }
 
 .card:after {
-  border: 2px solid black;
+  border: 3px solid rgb(84, 82, 82);
+  border-radius: 8px;
   transform: scaleZ(0);
   animation: btn-pisca 0.5s linear infinite;
 }

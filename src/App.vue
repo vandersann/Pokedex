@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-container>
+    <v-container fluid>
       <v-container>
         <v-row class="d-flex align-center">
           <v-col cols="12">
@@ -25,10 +25,12 @@
           v-model="search"
           label="Search for"
           placeholder="type here..."
+          @click="resetInput"
+          clearable
           solo
+          dense
           prepend-inner-icon="mdi-magnify"
         ></v-text-field>
-
         <v-row>
           <v-col
             cols="6"
@@ -47,9 +49,10 @@
       :selected_pokemon="selected_pokemon"
     />
 
-    <audio autoplay="autoplay" controls="controls" loop="true">
-      <source src="./assets/audio/pokemonTema.mp3" type="audio/mp3" />
-    </audio>
+      <audio autoplay="autoplay" controls="controls" loop="true">
+        <source src="./assets/audio/pokemonTema.mp3" type="audio/mp3" />
+      </audio>
+
   </v-app>
 </template>
 
@@ -95,7 +98,7 @@ export default {
     get_move_level(move) {
       for (let version of move.version_group_details) {
         if (
-          version.version_group.name == "sword-shield" &&
+          version.version_group.name == "scarlet-violet" &&
           version.move_learn_method.name == "level-up"
         ) {
           return version.level_learned_at;
@@ -114,6 +117,12 @@ export default {
     clickMouse: function () {
       this.play_audio(confirmaAudio);
     },
+
+    resetInput() {
+      this.search ="";
+      this.selected_pokemon = null;
+    },
+
   },
   computed: {
     filtered_pokemons() {
@@ -176,6 +185,18 @@ export default {
 .container {
   font-family: "Press Start 2P", cursive;
   font-size: 0.8em;
+}
+
+audio {
+  position: absolute;
+  filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+  width: 250px;
+  height: 25px;
+  opacity: 0.7;
+}
+
+.v-input__slot {
+  width: 97%;
 }
 
 @media screen and (max-width: 342px) {
