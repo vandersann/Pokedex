@@ -2,7 +2,7 @@
   <v-app>
     <v-container fluid>
       <v-container>
-        <v-row class="d-flex align-center">
+        <v-row class="d-flex justify-space-between">
           <v-col cols="12">
             <v-img
               :src="require('../src/assets/title50.png')"
@@ -14,7 +14,10 @@
           <v-col cols="12">
             <h1 class="text-center white--text mb-6">
               by
-              <a class="red--text" href="https://github.com/vandersann"
+              <a
+                class="black--text"
+                href="https://github.com/vandersann"
+                target="_blank"
                 >Vandersann💡</a
               >
             </h1>
@@ -38,7 +41,11 @@
             v-for="pokemon in filtered_pokemons"
             :key="pokemon.name"
           >
-            <PokemonCard :pokemon="pokemon" @clicked="show_pokemon" />
+            <PokemonCard
+              :pokemon="pokemon"
+              @clicked="show_pokemon"
+              class="d-flex"
+            />
           </v-col>
         </v-row>
       </v-container>
@@ -49,10 +56,9 @@
       :selected_pokemon="selected_pokemon"
     />
 
-      <audio autoplay="autoplay" controls="controls" loop="true">
-        <source src="./assets/audio/pokemonTema.mp3" type="audio/mp3" />
-      </audio>
-
+    <audio autoplay="autoplay" controls="controls" loop="true">
+      <source src="./assets/audio/pokemonTema.mp3" type="audio/mp3" />
+    </audio>
   </v-app>
 </template>
 
@@ -119,10 +125,9 @@ export default {
     },
 
     resetInput() {
-      this.search ="";
+      this.search = "";
       this.selected_pokemon = null;
     },
-
   },
   computed: {
     filtered_pokemons() {
@@ -135,38 +140,11 @@ export default {
 </script>
 
 <style>
-::-webkit-scrollbar {
-  width: 15px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.258);
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    transparent,
-    #dca3ff,
-    #b99fe8,
-    #aaa3ff,
-    #9dadf5,
-    #5472f7
-  );
-  border-radius: 10px;
-}
-
 #app {
   width: 100vw;
-  background: linear-gradient(
-    to left,
-    #dca3ff,
-    #b99fe8,
-    #aaa3ff,
-    #9dadf5,
-    #5472f7
-  );
+  background: linear-gradient(to left, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 300% 300%;
-  animation: colors 10s infinite alternate;
+  animation: colors 10s ease infinite;
 }
 
 @keyframes colors {
@@ -182,6 +160,23 @@ export default {
     background-position: 0% 50%;
   }
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    transparent,
+  black
+  );
+  border-radius: 10px;
+}
+
 .container {
   font-family: "Press Start 2P", cursive;
   font-size: 0.8em;
@@ -195,16 +190,23 @@ audio {
   opacity: 0.7;
 }
 
-.v-input__slot {
-  width: 97%;
-}
-
 @media screen and (max-width: 342px) {
   h1 {
-    font-size: 1.2em;
+    font-size: 1em;
   }
+
   .v-text-field {
-    font-size: 1.2em;
+    font-size: 1em;
+  }
+
+  .v-text-field label {
+    font-size: 0.8em;
+  }
+
+  audio {
+    position: absolute;
+    text-align: center;
+    opacity: 0.5;
   }
 }
 </style>

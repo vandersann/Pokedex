@@ -9,7 +9,7 @@
   >
     <v-container>
       <h3 class="card-number">No. {{ get_id(pokemon) }}</h3>
-      <v-row class="mx-0 d-flex justify-center">
+      <v-row class="mx-0 d-flex justify-space-between">
         <img
           :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${get_id(
             pokemon
@@ -17,7 +17,7 @@
           loading="lazy"
           :alt="pokemon.name"
           mb-2
-          width="70%"
+          width="100%"
         />
       </v-row>
       <h3 class="card-title">
@@ -68,7 +68,7 @@ export default {
 <style>
 .card {
   font-size: 1.8em;
-  width: 80%;
+  width: 100%;
   box-shadow: 0 0 5px 0px #e2e2e2;
   position: relative;
   cursor: pointer;
@@ -94,6 +94,7 @@ export default {
 
 .card:hover:after {
   transform: scaleX(1);
+  background-color: #cbdf9333;
 }
 
 @keyframes btn-pisca {
@@ -134,7 +135,7 @@ export default {
 
 @media screen and (max-width: 1263px) {
   .card {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 }
 

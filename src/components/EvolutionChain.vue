@@ -12,7 +12,7 @@
           <PokemonCard :pokemon="evolution_detail" flat />
         </v-col>
         <v-col md="1" :key="`evolution-${index}`" v-else>
-          <h3 class="text-center">L {{ evolution_detail }}</h3>
+          <h3 class="text-center">Lv {{ evolution_detail }}</h3>
         </v-col>
       </template>
     </v-row>
