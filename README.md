@@ -31,14 +31,7 @@ Primeira versão da [aplicação](https://user-images.githubusercontent.com/6567
   <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=css3&logoColor=white">
   <img src="https://img.shields.io/badge/vuejs-%2335495e.svg?style=flat&logo=vuedotjs&logoColor=%234FC08D">
   <img src="https://img.shields.io/badge/Vuetify-1867C0?style=flat&logo=vuetify&logoColor=AEDDFF">
-  <img src="https://img.shields.io/badge/node.js-6DA55F?style=flat&logo=node.js&logoColor=white">
-  
-  
-  
-## :man_technologist: Acessando o projeto
-
-Para acessar o projeto é fácil: <a href="https://game-regate91.netlify.app" target="_blank"><kbd>click aqui</kbd></a> ou aponte seu celular | <img src="imgs/qr.png" height="125" width="125" alt="apresentacao do site">
-:--------- | :---------    
+  <img src="https://img.shields.io/badge/node.js-6DA55F?style=flat&logo=node.js&logoColor=white">   
   
 ## 🤘 Clonando repositório e Subindo Aplicação
 
