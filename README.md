@@ -18,7 +18,11 @@ Primeira versão da [aplicação](https://user-images.githubusercontent.com/6567
 ![GitHub repo size](https://img.shields.io/github/repo-size/vandersann/Pokedex?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/vandersann/Pokedex?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/iuricode/Pokedex?style=for-the-badge)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ec1fe4f7-dc04-4838-a956-97b6471b46d3/deploy-status)](https://app.netlify.com/sites/effulgent-cupcake-86e1ed/deploys)
+
+<p align="center">
+<img  width="800" src="/src/assets/apresentacao.gif" alt="apresentacao do site">
+</p>
+
 
 ## 💻 Tecnologias:
 
