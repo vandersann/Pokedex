@@ -9,14 +9,14 @@
   >
     <v-container>
       <h3 class="card-number">No. {{ get_id(pokemon) }}</h3>
-      <v-row class="mx-0 d-flex justify-space-between">
+      <v-row class="mx-1 d-flex justify-space-between">
         <img
           :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${get_id(
             pokemon
           )}.png`"
           loading="lazy"
           :alt="pokemon.name"
-          mb-2
+          mb-8
           width="100%"
         />
       </v-row>
@@ -141,7 +141,7 @@ export default {
 
 @media screen and (max-width: 959px) {
   .card {
-    font-size: 1.8em;
+    font-size: 1em;
   }
 }
 

@@ -36,7 +36,7 @@
         ></v-text-field>
         <v-row>
           <v-col
-            cols="6"
+            cols="auto"
             md="2"
             v-for="pokemon in filtered_pokemons"
             :key="pokemon.name"
@@ -188,6 +188,20 @@ audio {
   width: 250px;
   height: 25px;
   opacity: 0.7;
+}
+
+@media screen and (max-width: 959px) {
+  h1 {
+    font-size: 1em;
+  }
+
+  .v-text-field {
+    font-size: 1em;
+  }
+
+  .v-text-field label {
+    font-size: 0.8em;
+  }
 }
 
 @media screen and (max-width: 342px) {
