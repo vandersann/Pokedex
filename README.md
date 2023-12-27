@@ -6,7 +6,7 @@
 -------
 
 ## 🔎 Sobre
-Esse é um projeto de uma Pokedex focado para pratica de funcionalidades do Vue.js com integração com API oficial do Pokémon.
+Esse é um projeto de uma Pokedex focado para prática de funcionalidades do Vue.js com integração com API oficial do Pokémon.
 
 Basiamente o aplicativo emula uma interface nos games do Game Boy, listando pokemons junto com detalhes
 específicos como: altura, peso, ataques, evoluções e etc.
