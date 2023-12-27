@@ -1,5 +1,4 @@
 module.exports = {
-  baseUrl: '/Pokedex',
-  publicPath: "/pokedex-vandersann",
+  publicPath: "/Pokedex",
   transpileDependencies: ["vuetify"],
 };
