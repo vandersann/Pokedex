@@ -11,7 +11,7 @@ Esse é um projeto de uma Pokedex focado para pratica de funcionalidades do Vue.
 Basiamente o aplicativo emula uma interface nos games do Game Boy, listando pokemons junto com detalhes
 específicos como: altura, peso, ataques, evoluções e etc.
 
-Os dados foram consumidos da API oficial do Pokemon, a [PokéApi](https://pokeapi.co/)
+Os dados foram consumidos da API oficial do Pokémon, a [PokéApi](https://pokeapi.co/)
 
 Primeira versão da [aplicação](https://user-images.githubusercontent.com/65673565/163481449-aef38c4b-ba00-46c6-805c-38f732d69b76.gif).
 
