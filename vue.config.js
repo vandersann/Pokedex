@@ -1,6 +1,7 @@
 module.exports = {
   publicPath: "/Pokedex",
   transpileDependencies: ["vuetify"],
+
   configureWebpack: {
     mode: 'development',
     devtool: false,
